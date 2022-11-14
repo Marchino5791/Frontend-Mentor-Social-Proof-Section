@@ -113,6 +113,7 @@ main {
   animation: fromRight 2s ease-out;
   animation-delay: .2s;
   backface-visibility: hidden;
+  animation-fill-mode: backwards;
 }
 
 .l3 {
@@ -120,6 +121,7 @@ main {
   animation: fromRight 2s ease-out;
   animation-delay: .4s;
   backface-visibility: hidden;
+  animation-fill-mode: backwards;
 }
 
 .comment-box {
@@ -157,6 +159,7 @@ main {
   animation: fromBottom 2s ease-out;
   animation-delay: .2s;
   backface-visibility: hidden;
+  animation-fill-mode: backwards;
 }
 
 .c3 {
@@ -165,6 +168,7 @@ main {
   animation: fromBottom 2s ease-out;
   animation-delay: .4s;
   backface-visibility: hidden;
+  animation-fill-mode: backwards;
 }
 
 .comment-box__person--image {
@@ -194,6 +198,8 @@ main {
   top: 2rem;
   animation: fromBottom 2s ease-out;
   backface-visibility: hidden;
+  animation-fill-mode: backwards;
+  animation-delay: 2.6s;
 }
 
 .attribution a {
@@ -291,6 +297,10 @@ main {
   .l2, .c1, .c3 {
     animation: fromLeft;
     animation-duration: 2s;
+    animation-delay: 0s;
+  }
+  
+  .attribution {
     animation-delay: 0s;
   }
 
