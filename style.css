@@ -74,13 +74,13 @@ main {
   font-weight: 700;
   display: flex;
   align-items: center;
-  box-shadow: 0.5rem 0.75rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.5rem 0.75rem 1rem rgba(0, 0, 0, 0.1);
   transition: all .4s linear;
 }
 
 .rate-box__line:hover{
   transform: translateY(-0.5rem) scale(1.05);
-  box-shadow: 0.75rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.75rem 1rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 .rate-box__line--star {
@@ -259,7 +259,7 @@ main {
   .comment-box {
     width: 100%;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .rate-box__line {
