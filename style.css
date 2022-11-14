@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-1: hsl(300, 43%, 22%);
+  --primary-2: hsl(333, 80%, 67%);
+  --secondary-magenta-dark: hsl(303, 10%, 53%);
+  --secondary-magenta-light: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 93.75%;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  width: 100%;
+  height: 99vh;
+  background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 40%, 70%;
+  background-position: top 0% left 0%, bottom -1vh right 0vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.text-box {
+  width: 50%;
+  animation: zoom 2s ease-out;
+  backface-visibility: hidden;
+}
+
+.text-box--primary-heading {
+  color: var(--primary-1);
+  font-size: 3.73rem;
+  width: 80%;
+}
+
+.text-box--paragraph {
+  color: var(--secondary-magenta-dark);
+  width: 80%;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.rate-box {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  }
+
+.rate-box__line {
+  background-color: var(--secondary-magenta-light);
+  color: var(--primary-1);
+  width: 85%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  box-shadow: 0.5rem 0.75rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all .4s linear;
+}
+
+.rate-box__line:hover{
+  transform: translateY(-0.5rem) scale(1.05);
+  box-shadow: 0.75rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+}
+
+.rate-box__line--star {
+  margin: 0 5%;
+  display: flex;
+}
+
+.fa-solid {
+  color: orange;
+  margin: 0 0.20rem;
+  font-size: 0.93rem;
+}
+
+.rate-box__line--text {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  display: inline;
+  margin-right: 5%;
+}
+
+.l1 {
+  margin: 1rem auto 1rem 0;
+  animation: fromRight 2s ease-out;
+  backface-visibility: hidden;
+}
+
+.l2 {
+  margin: 1rem auto;
+  animation: fromRight 2s ease-out;
+  animation-delay: .2s;
+  backface-visibility: hidden;
+}
+
+.l3 {
+  margin: 1rem 0 1rem auto;
+  animation: fromRight 2s ease-out;
+  animation-delay: .4s;
+  backface-visibility: hidden;
+}
+
+.comment-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.comment-box__person {
+  background-color: var(--primary-1);
+  color: var(--secondary-magenta-light);
+  width: 31%;
+  margin: 1rem 0;
+  padding: 2rem;
+  line-height: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.75rem 1rem rgba(0, 0, 0, 0.4);
+  transition: all .4s linear;
+}
+
+.comment-box__person:hover{
+  transform: translateY(-0.5rem) scale(1.05);
+  box-shadow: 0.75rem 1rem 1.5rem rgba(0, 0, 0, 0.4);
+}
+
+.c1 {
+  animation: fromBottom 2s ease-out;
+  backface-visibility: hidden;
+}
+
+.c2 {
+  position: relative;
+  top: 1rem;
+  animation: fromBottom 2s ease-out;
+  animation-delay: .2s;
+  backface-visibility: hidden;
+}
+
+.c3 {
+  position: relative;
+  top: 2rem;
+  animation: fromBottom 2s ease-out;
+  animation-delay: .4s;
+  backface-visibility: hidden;
+}
+
+.comment-box__person--image {
+  float: left;
+  border-radius: 50%;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.comment-box__person--name {
+  font-weight: 700;
+}
+
+.comment-box__person--verified {
+  color: var(--primary-2);
+}
+
+.comment-box__person--text {
+  margin-top: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  top: 2rem;
+  animation: fromBottom 2s ease-out;
+  backface-visibility: hidden;
+}
+
+.attribution a {
+  color: var(--primary-1);
+  text-decoration: none;
+}
+
+.attribution a:hover{
+  color: var(--primary-2);
+}
+
+::selection{
+  background-color: var(--primary-2);
+  color: var(--white);
+}
+
+@media (max-width: 1100px) {
+  html {
+    font-size: 75%;
+  }
+
+  .text-box--primary-heading, .text-box--paragraph {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+
+  html {
+    font-size: 93.75%;
+  }
+
+  body {
+    background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+    background-size: 100%, 50%;
+    background-position: top, bottom;
+    justify-content: flex-start;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 0;
+    margin: 2rem auto;
+    max-width: 400px;
+  }
+
+  .text-box--primary-heading,
+  .text-box--paragraph {
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-box--primary-heading{
+    font-size: 2.7975rem;
+  }
+
+  .text-box,
+  .rate-box,
+  .comment-box__person {
+    width: 100%;
+  }
+
+  .comment-box {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .rate-box__line {
+    width: 100%;
+    height: 5rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .l1, .l2, .l3{
+    margin: .5rem 0;
+  }
+
+  .fa-solid {
+    margin: 0 .35rem;
+  }
+
+  .c1, .c2, .c3 {
+    margin: 0;
+  }
+
+  /* animation */
+  .l1, .l3, .c2 {
+    animation: fromRight;
+    animation-duration: 2s;
+    animation-delay: 0s;
+  }
+
+  .l2, .c1, .c3 {
+    animation: fromLeft;
+    animation-duration: 2s;
+    animation-delay: 0s;
+  }
+
+  /* hover disable */
+  .rate-box__line:hover, .comment-box__person:hover {
+  transform: none;
+  }
+}
+
+@keyframes fromRight {
+
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateX(-5%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromLeft {
+
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateX(5%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromBottom {
+
+  0% {
+    transform: translateY(75%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom {
+
+  0% {
+    transform: scale(0.25);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
