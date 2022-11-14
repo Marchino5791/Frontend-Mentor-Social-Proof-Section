@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./https://github.com/Marchino5791/Frontend-Mentor-Social-Proof-Section/blob/main/Screenshot%20SPS.png)
+[img](./https://github.com/Marchino5791/Frontend-Mentor-Social-Proof-Section/blob/main/Screenshot%20SPS.png)
 
 ### Links
 
